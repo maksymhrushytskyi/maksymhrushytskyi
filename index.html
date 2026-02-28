@@ -1,134 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maksym Hrushytskyi | Database & AI Engineer</title>
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0f0f0f;
-    color: #ffffff;
-}
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-}
-h1, h2 {
-    color: #ff3c3c;
-}
-.section {
-    margin-bottom: 60px;
-}
-a {
-    color: #ff3c3c;
-    text-decoration: none;
-}
-.card {
-    background-color: #1c1c1c;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-.skills span {
-    display: inline-block;
-    background: #222;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksym Hrushytskyi - Resume</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --container-bg: #fff;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--container-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .lang-switcher button {
+            background-color: #e9ecef;
+            border: none;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #555;
+            transition: all 0.2s;
+        }
+        .lang-switcher button:hover {
+            background-color: #d3d9df;
+        }
+        .lang-switcher button.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .resume-content {
+            display: none;
+        }
+        .resume-content.active {
+            display: block;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            margin: 0 0 10px;
+            color: var(--primary-color);
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .contact-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .item-date {
+            color: #666;
+            font-style: italic;
+        }
+        .item-subtitle {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill-tag {
+            background-color: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
+    <div class="lang-switcher">
+        <button id="btn-uk" onclick="switchLang('uk')">Українська</button>
+        <button id="btn-en" class="active" onclick="switchLang('en')">English</button>
+        <button id="btn-pl" onclick="switchLang('pl')">Polski</button>
+    </div>
 
-<div class="section">
-<h1>Maksym Hrushytskyi</h1>
-<p><strong>Database Specialist | AI & LLM Integration | SQL Automation</strong></p>
-<p>Computer Science graduate focused on automating database workflows using Artificial Intelligence.</p>
-<p>
-<a href="mailto:maksymhrushytskyi@gmail.com">Email</a> |
-<a href="https://linkedin.com/in/maksymhrushytskyi" target="_blank">LinkedIn</a> |
-<a href="https://github.com/maksymhrushytskyi" target="_blank">GitHub</a>
-</p>
+    <div id="content-en" class="resume-content active">
+        <header>
+            [span_1](start_span)<h1>Maksym Hrushytskyi[span_1](end_span)</h1>
+            [span_2](start_span)<p><strong>Database Specialist[span_2](end_span)</strong></p>
+            <p>+48453445560 | maksymhrushytskyi@gmail.com | [span_3](start_span)Wrocław, Poland[span_3](end_span)</p>
+            <div class="contact-links">
+                [span_4](start_span)<a href="https://linkedin.com/in/maksymhrushytskyi" target="_blank">LinkedIn</a>[span_4](end_span) | 
+                [span_5](start_span)<a href="https://github.com/maksymhrushytskyi" target="_blank">GitHub</a>[span_5](end_span)
+            </div>
+        </header>
+
+        <h2>Profile</h2>
+        [span_6](start_span)<p>Computer Science graduate with a strong foundation in Artificial Intelligence and database management.[span_6](end_span) [span_7](start_span)Eager to apply my skills in SQL, Python, and LLM integration to help a forward-thinking company automate database workflows, reduce manual DBA effort, and improve query performance.[span_7](end_span)</p>
+
+        [span_8](start_span)<h2>Education[span_8](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_9](start_span)<span class="item-title">Master of Computer Science, West Ukrainian National University[span_9](end_span)</span>
+                <span class="item-date">09/2025 - Present | [span_10](start_span)Ternopil, Ukraine[span_10](end_span)</span>
+            </div>
+            [span_11](start_span)<p>Currently working on the research and implementation of a «Method of Automated Database Tuning Using Large Language Models» for my Master's thesis.[span_11](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_12](start_span)<span class="item-title">Bachelor of Computer Science and Artificial Intelligence, West Ukrainian National University[span_12](end_span)</span>
+                <span class="item-date">09/2021 - 06/2025 | [span_13](start_span)Ternopil, Ukraine[span_13](end_span)</span>
+            </div>
+            <ul>
+                [span_14](start_span)<li>Defended a Bachelor's thesis: «Intelligent Text-to-SQL Query Generator» with an excellent grade (90/100).[span_14](end_span)</li>
+                [span_15](start_span)<li>Developed a desktop application using Python, PyQt6, SQLite, and GPT-4o to translate natural language into SQL queries.[span_15](end_span)</li>
+                [span_16](start_span)<li>Excelled in core coursework including Client-Server Application Development, Database Management, and Modern Programming Paradigms.[span_16](end_span)</li>
+                [span_17](start_span)<li>Served as an Academic Group Leader for 2 years, facilitating communication between students and faculty, which developed strong leadership, organization, and problem-solving skills.[span_17](end_span)</li>
+            </ul>
+        </div>
+
+        [span_18](start_span)<h2>Professional Experience[span_18](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_19](start_span)<span class="item-title">IT Support Specialist, LLC SPETSAVTOINVEST[span_19](end_span)</span>
+                <span class="item-date">11/2023 - 09/2025 | [span_20](start_span)Ternopil, Ukraine[span_20](end_span)</span>
+            </div>
+            <ul>
+                [span_21](start_span)<li>Resolved up to 20 daily technical support requests from internal users, effectively troubleshooting software issues and minimizing workflow downtime.[span_21](end_span)</li>
+                [span_22](start_span)<li>Collaborated with the development team to deploy and integrate new software solutions, assisting with functional testing and ensuring smooth feature rollouts.[span_22](end_span)</li>
+                [span_23](start_span)<li>Executed SQL queries and maintained database records within the internal company application, ensuring high data accuracy and consistency for daily operations.[span_23](end_span)</li>
+                [span_24](start_span)<li>Developed technical documentation and conducted user training, which streamlined the onboarding process for new system features and reduced repeat support questions.[span_24](end_span)</li>
+                [span_25](start_span)<li>Managed software administration for warehouse operations, including creating user-friendly CSS interfaces and optimizing the digital processing of invoices and transfers.[span_25](end_span)</li>
+            </ul>
+        </div>
+
+        [span_26](start_span)<h2>Projects[span_26](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_27](start_span)<span class="item-title">Software Module for Intelligent SQL Queries Generation Based on Natural Language[span_27](end_span)</span>
+                [span_28](start_span)<span class="item-date">01/2025 - 07/2025[span_28](end_span)</span>
+            </div>
+            [span_29](start_span)<p>Developed a software module SQL Viewer that automatically generates SQL queries from natural language input using artificial intelligence technologies (GPT-4o).[span_29](end_span) The system supports:</p>
+            <ul>
+                [span_30](start_span)<li>Voice command recognition (Speech-to-Text); user authentication and access control; work with local SQLite databases.[span_30](end_span)</li>
+                [span_31](start_span)<li>Exporting query results to PDF, Word, and Excel formats; full support for the Ukrainian language.[span_31](end_span)</li>
+            </ul>
+            [span_32](start_span)<p>The project was implemented in Python using PyQt6, g4f, speech_recognition, openpyxl, python-docx, and ReportLab libraries.[span_32](end_span) [span_33](start_span)The goal is to make working with databases accessible even to users without SQL knowledge.[span_33](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_34](start_span)<span class="item-title">Method of Database Tuning Using Large Language Models[span_34](end_span)</span>
+                [span_35](start_span)<span class="item-date">01/2026 - 12/2026[span_35](end_span)</span>
+            </div>
+            [span_36](start_span)<p>This master's project focuses on automating database performance tuning using Large Language Models (LLMs).[span_36](end_span) [span_37](start_span)The system analyzes database metadata, query execution plans, and performance metrics to identify bottlenecks and generate tuning recommendations, such as index optimization, query rewriting suggestions, and configuration adjustments.[span_37](end_span) [span_38](start_span)The goal is to reduce manual DBA effort and improve database performance by leveraging Artificial Intelligence-driven decision support.[span_38](end_span) [span_39](start_span)The project demonstrates a practical approach to integrating LLMs into database administration workflows, emphasizing automation, explainability, and real-world applicability.[span_39](end_span)</p>
+        </div>
+
+        [span_40](start_span)<h2>Skills[span_40](end_span)</h2>
+        <div class="skills-container">
+            [span_41](start_span)<span class="skill-tag">Python[span_41](end_span)</span>
+            [span_42](start_span)<span class="skill-tag">SQLite[span_42](end_span)</span>
+            [span_43](start_span)<span class="skill-tag">MySQL[span_43](end_span)</span>
+            [span_44](start_span)<span class="skill-tag">Oracle Database[span_44](end_span)</span>
+            [span_45](start_span)<span class="skill-tag">PostgreSQL[span_45](end_span)</span>
+            [span_46](start_span)<span class="skill-tag">Microsoft SQL Server[span_46](end_span)</span>
+            [span_47](start_span)<span class="skill-tag">SQL[span_47](end_span)</span>
+            [span_48](start_span)<span class="skill-tag">Database Tuning[span_48](end_span)</span>
+            [span_49](start_span)<span class="skill-tag">LLM Integration[span_49](end_span)</span>
+            [span_50](start_span)<span class="skill-tag">Software Testing[span_50](end_span)</span>
+            [span_51](start_span)<span class="skill-tag">System Administration[span_51](end_span)</span>
+            [span_52](start_span)<span class="skill-tag">Database Management[span_52](end_span)</span>
+        </div>
+
+        [span_53](start_span)<h2>Languages[span_53](end_span)</h2>
+        [span_54](start_span)<p>Ukrainian (Native), English (B1), Polish (A2)[span_54](end_span)</p>
+    </div>
+
+    <div id="content-uk" class="resume-content">
+        <header>
+            [span_55](start_span)<h1>Максим Грушицький[span_55](end_span)</h1>
+            [span_56](start_span)<p><strong>Фахівець з баз даних[span_56](end_span)</strong></p>
+            <p>+48453445560 | maksymhrushytskyi@gmail.com | [span_57](start_span)Вроцлав, Польща[span_57](end_span)</p>
+            <div class="contact-links">
+                [span_58](start_span)<a href="https://linkedin.com/in/maksymhrushytskyi" target="_blank">LinkedIn</a>[span_58](end_span) | 
+                [span_59](start_span)<a href="https://github.com/maksymhrushytskyi" target="_blank">GitHub</a>[span_59](end_span)
+            </div>
+        </header>
+
+        <h2>Профіль</h2>
+        [span_60](start_span)<p>Випускник факультету комп'ютерних наук з міцною базою в галузі штучного інтелекту та управління базами даних.[span_60](end_span) [span_61](start_span)Прагну застосувати свої навички роботи з SQL, Python та інтеграції LLM, щоб допомогти передовій компанії автоматизувати робочі процеси баз даних, зменшити ручні зусилля адміністраторів баз даних та покращити продуктивність запитів.[span_61](end_span)</p>
+
+        [span_62](start_span)<h2>Освіта[span_62](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_63](start_span)<span class="item-title">Магістр комп'ютерних наук, Західноукраїнський національний університет[span_63](end_span)</span>
+                <span class="item-date">09/2025 - Теперішній час | [span_64](start_span)Тернопіль, Україна[span_64](end_span)</span>
+            </div>
+            [span_65](start_span)<p>Наразі працюю над дослідженням та реалізацією «Методу автоматизованого налаштування баз даних за допомогою великих мовних моделей» для магістерської роботи.[span_65](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_66](start_span)<span class="item-title">Бакалавр комп'ютерних наук та штучного інтелекту, Західноукраїнський національний університет[span_66](end_span)</span>
+                <span class="item-date">09/2021 - 06/2025 | [span_67](start_span)Тернопіль, Україна[span_67](end_span)</span>
+            </div>
+            <ul>
+                [span_68](start_span)<li>Захистив бакалаврську роботу: «Інтелектуальний генератор Text-to-SQL запитів» на відмінно (90/100).[span_68](end_span)</li>
+                [span_69](start_span)<li>Розробив десктопний додаток за допомогою Python, PyQt6, SQLite та GPT-4o для перекладу природної мови в SQL-запити.[span_69](end_span)</li>
+                [span_70](start_span)<li>Відзначився в основних курсах, включаючи розробку клієнт-серверних додатків, управління базами даних та сучасні парадигми програмування.[span_70](end_span)</li>
+                [span_71](start_span)<li>2 роки був старостою академічної групи, сприяючи комунікації між студентами та викладачами, що розвинуло сильні лідерські, організаційні навички та вміння вирішувати проблеми.[span_71](end_span)</li>
+            </ul>
+        </div>
+
+        [span_72](start_span)<h2>Професійний досвід[span_72](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_73](start_span)<span class="item-title">Спеціаліст з ІТ-підтримки, ТОВ "СПЕЦАВТОІНВЕСТ"[span_73](end_span)</span>
+                <span class="item-date">11/2023 - 09/2025 | [span_74](start_span)Тернопіль, Україна[span_74](end_span)</span>
+            </div>
+            <ul>
+                [span_75](start_span)<li>Вирішував до 20 щоденних запитів на технічну підтримку від внутрішніх користувачів, ефективно усуваючи проблеми з програмним забезпеченням та мінімізуючи час простою.[span_75](end_span)</li>
+                [span_76](start_span)<li>Співпрацював з командою розробників для розгортання та інтеграції нових програмних рішень, допомагаючи у функціональному тестуванні та забезпечуючи плавне впровадження функцій.[span_76](end_span)</li>
+                [span_77](start_span)<li>Виконував SQL-запити та підтримував записи баз даних у внутрішньому додатку компанії, забезпечуючи високу точність та узгодженість даних для щоденних операцій.[span_77](end_span)</li>
+                [span_78](start_span)<li>Розробляв технічну документацію та проводив навчання користувачів, що оптимізувало процес ознайомлення з новими функціями системи та зменшило кількість повторних запитань до служби підтримки.[span_78](end_span)</li>
+                [span_79](start_span)<li>Керував адмініструванням програмного забезпечення для складських операцій, включаючи створення зручних CSS-інтерфейсів та оптимізацію цифрової обробки рахунків-фактур і переказів.[span_79](end_span)</li>
+            </ul>
+        </div>
+
+        [span_80](start_span)<h2>Проєкти[span_80](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_81](start_span)<span class="item-title">Програмний модуль для інтелектуальної генерації SQL-запитів на основі природної мови[span_81](end_span)</span>
+                [span_82](start_span)<span class="item-date">01/2025 - 07/2025[span_82](end_span)</span>
+            </div>
+            [span_83](start_span)<p>Розробив програмний модуль SQL Viewer, який автоматично генерує SQL-запити з введення природною мовою за допомогою технологій штучного інтелекту (GPT-4o).[span_83](end_span) Система підтримує:</p>
+            <ul>
+                <li>Розпізнавання голосових команд (Speech-to-Text); автентифікацію користувачів та контроль доступу; [span_84](start_span)роботу з локальними базами даних SQLite.[span_84](end_span)</li>
+                <li>Експорт результатів запитів у формати PDF, Word та Excel; [span_85](start_span)повну підтримку української мови.[span_85](end_span)</li>
+            </ul>
+            [span_86](start_span)<p>Проєкт реалізовано на Python з використанням бібліотек PyQt6, g4f, speech_recognition, openpyxl, python-docx та ReportLab.[span_86](end_span) [span_87](start_span)Мета полягає в тому, щоб зробити роботу з базами даних доступною навіть для користувачів без знання SQL.[span_87](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_88](start_span)<span class="item-title">Метод налаштування баз даних з використанням великих мовних моделей[span_88](end_span)</span>
+                [span_89](start_span)<span class="item-date">01/2026 - 12/2026[span_89](end_span)</span>
+            </div>
+            [span_90](start_span)<p>Цей магістерський проєкт зосереджений на автоматизації налаштування продуктивності баз даних з використанням великих мовних моделей (LLMs).[span_90](end_span) [span_91](start_span)Система аналізує метадані бази даних, плани виконання запитів і показники продуктивності для виявлення вузьких місць і генерації рекомендацій щодо налаштування, таких як оптимізація індексів, пропозиції щодо переписування запитів і коригування конфігурації.[span_91](end_span) [span_92](start_span)Мета – зменшити ручні зусилля адміністратора БД і покращити продуктивність бази даних шляхом використання підтримки прийняття рішень на основі ШІ.[span_92](end_span) [span_93](start_span)Проєкт демонструє практичний підхід до інтеграції LLM у робочі процеси адміністрування баз даних, підкреслюючи автоматизацію, можливість пояснення та застосовність у реальному світі.[span_93](end_span)</p>
+        </div>
+
+        [span_94](start_span)<h2>Навички[span_94](end_span)</h2>
+        <div class="skills-container">
+            [span_95](start_span)<span class="skill-tag">Python[span_95](end_span)</span>
+            [span_96](start_span)<span class="skill-tag">SQLite[span_96](end_span)</span>
+            [span_97](start_span)<span class="skill-tag">MySQL[span_97](end_span)</span>
+            [span_98](start_span)<span class="skill-tag">Oracle Database[span_98](end_span)</span>
+            [span_99](start_span)<span class="skill-tag">PostgreSQL[span_99](end_span)</span>
+            [span_100](start_span)<span class="skill-tag">Microsoft SQL Server[span_100](end_span)</span>
+            [span_101](start_span)<span class="skill-tag">SQL[span_101](end_span)</span>
+            [span_102](start_span)<span class="skill-tag">Налаштування БД[span_102](end_span)</span>
+            [span_103](start_span)<span class="skill-tag">Інтеграція LLM[span_103](end_span)</span>
+            [span_104](start_span)<span class="skill-tag">Тестування ПЗ[span_104](end_span)</span>
+            [span_105](start_span)<span class="skill-tag">Системне адміністрування[span_105](end_span)</span>
+            [span_106](start_span)<span class="skill-tag">Управління БД[span_106](end_span)</span>
+        </div>
+
+        [span_107](start_span)<h2>Мови[span_107](end_span)</h2>
+        [span_108](start_span)<p>Українська (Рідна), Англійська (B1), Польська (A2)[span_108](end_span)</p>
+    </div>
+
+    <div id="content-pl" class="resume-content">
+        <header>
+            [span_109](start_span)<h1>Maksym Hrushytskyi[span_109](end_span)</h1>
+            <p><strong>Specjalista ds. [span_110](start_span)Baz Danych[span_110](end_span)</strong></p>
+            <p>+48453445560 | maksymhrushytskyi@gmail.com | [span_111](start_span)Wrocław, Polska[span_111](end_span)</p>
+            <div class="contact-links">
+                [span_112](start_span)<a href="https://linkedin.com/in/maksymhrushytskyi" target="_blank">LinkedIn</a>[span_112](end_span) | 
+                [span_113](start_span)<a href="https://github.com/maksymhrushytskyi" target="_blank">GitHub</a>[span_113](end_span)
+            </div>
+        </header>
+
+        <h2>Profil</h2>
+        [span_114](start_span)<p>Absolwent informatyki z solidnymi podstawami w dziedzinie sztucznej inteligencji i zarządzania bazami danych.[span_114](end_span) [span_115](start_span)Chcę wykorzystać moje umiejętności w zakresie SQL, Pythona i integracji LLM, aby pomóc nowoczesnej firmie w automatyzacji przepływów pracy w bazach danych, zmniejszeniu nakładu pracy ręcznej administratorów (DBA) i poprawie wydajności zapytań.[span_115](end_span)</p>
+
+        [span_116](start_span)<h2>Edukacja[span_116](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_117](start_span)<span class="item-title">Magister Informatyki, Zachodnioukraiński Uniwersytet Narodowy[span_117](end_span)</span>
+                <span class="item-date">09/2025 - Obecnie | [span_118](start_span)Tarnopol, Ukraina[span_118](end_span)</span>
+            </div>
+            [span_119](start_span)<p>Obecnie pracuję nad badaniami i wdrożeniem „Metody zautomatyzowanego dostrajania baz danych przy użyciu dużych modeli językowych” w ramach mojej pracy magisterskiej.[span_119](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_120](start_span)<span class="item-title">Licencjat z Informatyki i Sztucznej Inteligencji, Zachodnioukraiński Uniwersytet Narodowy[span_120](end_span)</span>
+                <span class="item-date">09/2021 - 06/2025 | [span_121](start_span)Tarnopol, Ukraina[span_121](end_span)</span>
+            </div>
+            <ul>
+                [span_122](start_span)<li>Obroniłem pracę licencjacką: „Inteligentny generator zapytań Text-to-SQL” z oceną bardzo dobrą (90/100).[span_122](end_span)</li>
+                [span_123](start_span)<li>Stworzyłem aplikację desktopową przy użyciu Python, PyQt6, SQLite i GPT-4o do tłumaczenia języka naturalnego na zapytania SQL.[span_123](end_span)</li>
+                [span_124](start_span)<li>Wyróżniałem się w głównych przedmiotach, w tym w rozwoju aplikacji klient-serwer, zarządzaniu bazami danych i nowoczesnych dogmatach programowania.[span_124](end_span)</li>
+                [span_125](start_span)<li>Przez 2 lata pełniłem funkcję starosty grupy akademickiej, ułatwiając komunikację między studentami a wykładowcami, co rozwinęło silne umiejętności przywódcze, organizacyjne i rozwiązywania problemów.[span_125](end_span)</li>
+            </ul>
+        </div>
+
+        [span_126](start_span)<h2>Doświadczenie Zawodowe[span_126](end_span)</h2>
+        <div>
+            <div class="item-header">
+                <span class="item-title">Specjalista ds. [span_127](start_span)Wsparcia IT, LLC SPETSAVTOINVEST[span_127](end_span)</span>
+                <span class="item-date">11/2023 - 09/2025 | [span_128](start_span)Tarnopol, Ukraina[span_128](end_span)</span>
+            </div>
+            <ul>
+                [span_129](start_span)<li>Rozwiązywałem do 20 codziennych zgłoszeń wsparcia technicznego od użytkowników wewnętrznych, skutecznie diagnozując problemy z oprogramowaniem i minimalizując przestoje w pracy.[span_129](end_span)</li>
+                [span_130](start_span)<li>Współpracowałem z zespołem programistów przy wdrażaniu i integracji nowych rozwiązań programistycznych, pomagając w testach funkcjonalnych i zapewniając płynne wprowadzanie nowych funkcji.[span_130](end_span)</li>
+                [span_131](start_span)<li>Wykonywałem zapytania SQL i utrzymywałem rekordy baz danych w wewnętrznej aplikacji firmy, zapewniając wysoką dokładność i spójność danych do codziennych operacji.[span_131](end_span)</li>
+                [span_132](start_span)<li>Opracowałem dokumentację techniczną i przeprowadzałem szkolenia dla użytkowników, co usprawniło proces wdrażania nowych funkcji systemu i zmniejszyło liczbę powtarzających się pytań do wsparcia.[span_132](end_span)</li>
+                [span_133](start_span)<li>Zarządzałem administracją oprogramowania dla operacji magazynowych, w tym tworzeniem przyjaznych dla użytkownika interfejsów CSS i optymalizacją cyfrowego przetwarzania faktur i przelewów.[span_133](end_span)</li>
+            </ul>
+        </div>
+
+        [span_134](start_span)<h2>Projekty[span_134](end_span)</h2>
+        <div>
+            <div class="item-header">
+                [span_135](start_span)<span class="item-title">Moduł oprogramowania do inteligentnego generowania zapytań SQL na podstawie języka naturalnego[span_135](end_span)</span>
+                [span_136](start_span)<span class="item-date">01/2025 - 07/2025[span_136](end_span)</span>
+            </div>
+            [span_137](start_span)<p>Stworzyłem moduł oprogramowania SQL Viewer, który automatycznie generuje zapytania SQL na podstawie danych wejściowych w języku naturalnym przy użyciu technologii sztucznej inteligencji (GPT-4o).[span_137](end_span) System obsługuje:</p>
+            <ul>
+                [span_138](start_span)<li>Rozpoznawanie komend głosowych (Speech-to-Text); uwierzytelnianie użytkowników i kontrolę dostępu; pracę z lokalnymi bazami danych SQLite.[span_138](end_span)</li>
+                [span_139](start_span)<li>Eksportowanie wyników zapytań do formatów PDF, Word i Excel; pełne wsparcie dla języka ukraińskiego.[span_139](end_span)</li>
+            </ul>
+            [span_140](start_span)<p>Projekt został zrealizowany w Pythonie przy użyciu bibliotek PyQt6, g4f, speech_recognition, openpyxl, python-docx i ReportLab.[span_140](end_span) [span_141](start_span)Celem jest udostępnienie pracy z bazami danych nawet użytkownikom bez znajomości SQL.[span_141](end_span)</p>
+        </div>
+        <div>
+            <div class="item-header">
+                [span_142](start_span)<span class="item-title">Metoda dostrajania baz danych przy użyciu dużych modeli językowych[span_142](end_span)</span>
+                [span_143](start_span)<span class="item-date">01/2026 - 12/2026[span_143](end_span)</span>
+            </div>
+            [span_144](start_span)<p>Ten projekt magisterski koncentruje się na automatyzacji dostrajania wydajności baz danych przy użyciu dużych modeli językowych (LLM).[span_144](end_span) [span_145](start_span)System analizuje metadane bazy danych, plany wykonania zapytań i metryki wydajności w celu identyfikacji wąskich gardeł i generowania zaleceń dotyczących dostrajania, takich jak optymalizacja indeksów, sugestie przepisywania zapytań i korekty konfiguracji.[span_145](end_span) [span_146](start_span)Celem jest zmniejszenie nakładu pracy ręcznej administratora (DBA) i poprawa wydajności bazy danych poprzez wykorzystanie wsparcia decyzji opartego na sztucznej inteligencji.[span_146](end_span) [span_147](start_span)Projekt demonstruje praktyczne podejście do integracji LLM z przepływami pracy administracji bazami danych, z naciskiem na automatyzację, wyjaśnialność i zastosowanie w świecie rzeczywistym.[span_147](end_span)</p>
+        </div>
+
+        [span_148](start_span)<h2>Umiejętności[span_148](end_span)</h2>
+        <div class="skills-container">
+            [span_149](start_span)<span class="skill-tag">Python[span_149](end_span)</span>
+            [span_150](start_span)<span class="skill-tag">SQLite[span_150](end_span)</span>
+            [span_151](start_span)<span class="skill-tag">MySQL[span_151](end_span)</span>
+            [span_152](start_span)<span class="skill-tag">Oracle Database[span_152](end_span)</span>
+            [span_153](start_span)<span class="skill-tag">PostgreSQL[span_153](end_span)</span>
+            [span_154](start_span)<span class="skill-tag">Microsoft SQL Server[span_154](end_span)</span>
+            [span_155](start_span)<span class="skill-tag">SQL[span_155](end_span)</span>
+            [span_156](start_span)<span class="skill-tag">Dostrajanie BD[span_156](end_span)</span>
+            [span_157](start_span)<span class="skill-tag">Integracja LLM[span_157](end_span)</span>
+            [span_158](start_span)<span class="skill-tag">Testowanie Oprogramowania[span_158](end_span)</span>
+            [span_159](start_span)<span class="skill-tag">Administracja Systemami[span_159](end_span)</span>
+            [span_160](start_span)<span class="skill-tag">Zarządzanie Bazami Danych[span_160](end_span)</span>
+        </div>
+
+        [span_161](start_span)<h2>Języki[span_161](end_span)</h2>
+        [span_162](start_span)<p>Ukraiński (Ojczysty), Angielski (B1), Polski (A2)[span_162](end_span)</p>
+    </div>
 </div>
 
-<div class="section">
-<h2>About Me</h2>
-<div class="card">
-<p>I specialize in SQL, Python, and LLM-driven automation. My goal is to reduce manual DBA effort and build intelligent systems that optimize database performance automatically.</p>
-</div>
-</div>
-
-<div class="section">
-<h2>Technical Skills</h2>
-<div class="skills">
-<span>Python</span>
-<span>SQL</span>
-<span>PostgreSQL</span>
-<span>MySQL</span>
-<span>Oracle</span>
-<span>SQLite</span>
-<span>Microsoft SQL Server</span>
-<span>LLM Integration</span>
-<span>Database Tuning</span>
-<span>System Administration</span>
-</div>
-</div>
-
-<div class="section">
-<h2>Professional Experience</h2>
-<div class="card">
-<h3>IT Support Specialist – LLC SPETSAVTOINVEST</h3>
-<p>Nov 2023 – Sep 2025</p>
-<ul>
-<li>Resolved up to 20 daily technical support requests</li>
-<li>Executed SQL queries and maintained internal databases</li>
-<li>Collaborated with developers during feature deployment</li>
-<li>Optimized warehouse software workflows</li>
-</ul>
-</div>
-</div>
-
-<div class="section">
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Intelligent Text-to-SQL Generator</h3>
-<p>Desktop system that converts natural language into SQL queries using GPT-4o.</p>
-<ul>
-<li>Voice recognition support</li>
-<li>SQLite integration</li>
-<li>PDF, Word, Excel export</li>
-<li>Ukrainian language support</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Automated Database Tuning with LLMs</h3>
-<p>Master’s research project focused on AI-driven database performance optimization.</p>
-<ul>
-<li>Query plan analysis</li>
-<li>Index recommendations</li>
-<li>Performance bottleneck detection</li>
-<li>Automated tuning suggestions</li>
-</ul>
-</div>
-
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<p>Wrocław, Poland</p>
-<p>Email: maksymhrushytskyi@gmail.com</p>
-<p>Phone: +48 453 445 560</p>
-</div>
-
-</div>
+<script>
+    function switchLang(lang) {
+        // Сховати всі версії резюме
+        document.querySelectorAll('.resume-content').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        // Зняти активний клас з усіх кнопок
+        document.querySelectorAll('.lang-switcher button').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        // Показати обрану мову
+        document.getElementById('content-' + lang).classList.add('active');
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
