@@ -1,3 +1,3 @@
 - 👋 Hi, I’m @maksymhrushytskyi
 - 📫 How to reach me? Just send me a message to maksymhrushytskyi@gmail.com
-- 🌱 My Linkedin account: https://www.linkedin.com/in/hrushytskyi-maksym-5a48642bb/
+- 🌱 My Linkedin account: https://linkedin.com/in/maksymhrushytskyi
